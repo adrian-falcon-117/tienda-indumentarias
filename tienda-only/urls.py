@@ -4,7 +4,7 @@ from shop import views
 
 
 urlpatterns = [
-    path("", views.inicio, name="inicio"),
+    path("", views.index, name="index"),
     path("shop/", include("shop.urls")),
     path("admin/", admin.site.urls),
 ]

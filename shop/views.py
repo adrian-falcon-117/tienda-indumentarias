@@ -9,5 +9,5 @@ def catalogo(request):
     return render(request, "shop/catalogo.html", ctx)
 
 
-def inicio(request):
-    return render(request, "shop/inicio.html")
+def index(request):
+    return render(request, "shop/index.html")
