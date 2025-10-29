@@ -1,0 +1,35 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Catalogo{% endblock %}
+
+{% block content %}
+<h3>Catálogo</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Talle</th>
+      <th>Color</th>
+      <th>Lisa</th>
+      <th>Género</th>
+    </tr>
+  </thead>
+  {% for remera in remeras %}
+  <tr>
+    <td>{{ remera.marca }}</td>
+    <td>{{ remera.get_talle_display }}</td>
+    <td>{{ remera.color }}</td>
+    <td>
+      {% if remera.lisa %}
+      Sí
+      {% else %}
+      No
+      {% endif %}
+    </td>
+    <td>{{ remera.get_genero_display }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

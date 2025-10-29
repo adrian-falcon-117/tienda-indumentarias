@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <img class="img-hero" src="{% static 'shop/hero.png' %}" alt="">
+    <h1>¡Bienvenido a nuestro sitio!</h1>
+</div>
+
+<p class="presentacion">
+    En nuestra tienda de indumentaria encontrarás una cuidada selección de prendas de excelente calidad, con variedad de
+    talles y estilos para todos los gustos. Trabajamos con marcas reconocidas como Lacoste, Nike, Jaguar y muchas otras,
+    ofreciendo productos originales a precios accesibles. Ya sea que busques ropa deportiva, urbana o clásica, te
+    garantizamos una experiencia de compra cómoda, confiable y pensada para vos.
+</p>
+
+
+{% endblock %}

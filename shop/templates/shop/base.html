@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+
+<head>
+<link rel="icon" href="{% static 'shop/icon.png' %}">
+  <title>
+    Tienda de Indumentaria Online
+  </title>
+  <link rel="stylesheet" href="{% static 'shop/style.css' %} ?v={{ timestamp }}">
+</head>
+
+
+<header>
+  <nav class="navbar">
+    <img class="icon" src="{% static 'shop/icon.png' %}" />
+    <h1>Tienda de indumentarias</h1>
+
+    <ul class="nav-list">
+      <li><a href="{% url 'inicio' %}">Inicio</a></li>
+      <li><a href="{% url 'catalogo' %}">Catálogo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  {% block content %}
+
+  {% endblock %}
+
+</body>
+
+<footer id="contacto">
+  <h1>Contacto</h1>
+  <p><strong>Dirección</strong>: Av. Alverdi 1315</p>
+  <p><strong>Teléfono</strong>: +54 9 3735 121314</p>
+  <p><strong>Email</strong>: contacto@tienda-only.com
+</footer>
+
+</html>
